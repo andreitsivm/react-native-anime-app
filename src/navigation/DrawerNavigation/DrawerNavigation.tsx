@@ -4,9 +4,13 @@ import { Dictionary, screens } from "../../appConstants";
 import { MainScreen } from "../../screens";
 import { AnimeListStack } from "../StackNavigation";
 import { AuthenticationTab } from "../TabNavigation";
+import { userSelector } from "../../store";
+import { useSelector } from "react-redux";
 
 const Drawer = createDrawerNavigator();
+
 const DrawerNavigation = () => {
+  const user = useSelector(userSelector);
   return (
     <Drawer.Navigator
       initialRouteName={screens.MAIN}
@@ -23,7 +27,9 @@ const DrawerNavigation = () => {
       <Drawer.Screen
         name={screens.AUTH}
         component={AuthenticationTab}
-        options={{ title: Dictionary.AUTH_SCREEN_TITLE }}
+        options={{
+          title: user ? Dictionary.ACCOUNT_INFO : Dictionary.AUTH_SCREEN_TITLE,
+        }}
       />
     </Drawer.Navigator>
   );
