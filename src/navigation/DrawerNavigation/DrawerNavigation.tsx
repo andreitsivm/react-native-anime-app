@@ -1,8 +1,7 @@
 import React from "react";
-import { Button } from "react-native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import { Dictionary, screens } from "../../constants";
-import { MainScreen } from "../../screens";
+import { Dictionary, screens } from "appConstants";
+import { MainScreen } from "screens";
 import { AnimeListStack } from "../StackNavigation";
 import { AuthenticationTab } from "../TabNavigation";
 

@@ -5,8 +5,8 @@ import {
   AnimeDetailsScreen,
   AnimeListScreen,
   MainScreen,
-} from "../../screens";
-import { Dictionary, screens } from "../../constants";
+} from "screens";
+import { Dictionary, screens } from "appConstants";
 
 const Stack = createStackNavigator();
 

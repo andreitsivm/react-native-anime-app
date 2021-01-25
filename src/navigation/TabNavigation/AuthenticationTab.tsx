@@ -1,8 +1,7 @@
 import React from "react";
-import { View, Text } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { LoginScreen, RegisterScreen } from "../../screens";
-import { Dictionary, screens } from "../../constants";
+import { LoginScreen, RegisterScreen } from "screens";
+import { screens } from "appConstants";
 
 const Tab = createBottomTabNavigator();
 

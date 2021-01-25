@@ -13,6 +13,7 @@ const MainScreen = () => {
   );
 };
 export default MainScreen;
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
