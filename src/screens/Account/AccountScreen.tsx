@@ -9,7 +9,6 @@ import { useDispatch, useSelector } from "react-redux";
 const AccountScreen: React.FC = () => {
   const dispatch = useDispatch();
   const user = useSelector(userSelector);
-  console.log(user);
   return (
     <Layout>
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>

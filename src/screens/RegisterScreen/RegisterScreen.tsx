@@ -35,6 +35,7 @@ const RegisterScreen = () => {
         <TextInput
           style={styles.input}
           keyboardType="email-address"
+          placeholder={Dictionary.INPUT_YOUR_EMAIL}
           value={email}
           onChangeText={(email) => setEmail(email)}
         />
@@ -44,12 +45,14 @@ const RegisterScreen = () => {
         <TextInput
           style={styles.input}
           value={password}
+          placeholder={Dictionary.INPUT_YOUR_PASSWORD}
           onChangeText={(password) => setPassword(password)}
         />
       </View>
       <View>
         <Text style={styles.label}>{Dictionary.REPEAT_PASSWORD}</Text>
         <TextInput
+          placeholder={Dictionary.REPEAT_PASSWORD}
           style={styles.input}
           value={confirmedPassword}
           onChangeText={(password) => setConfirmedPassword(password)}
@@ -74,8 +77,11 @@ const styles = StyleSheet.create({
     marginTop: 8,
   },
   input: {
+    marginVertical: 8,
     borderWidth: 1,
     borderColor: "blue",
+    padding: 5,
+    borderRadius: 5,
   },
   label: {
     fontSize: 18,

@@ -33,6 +33,7 @@ const LoginScreen: React.FC = () => {
         <Text style={styles.label}>{Dictionary.EMAIL}</Text>
         <TextInput
           style={styles.input}
+          placeholder={Dictionary.INPUT_YOUR_EMAIL}
           keyboardType="email-address"
           value={email}
           onChangeText={(email) => setEmail(email)}
@@ -43,6 +44,7 @@ const LoginScreen: React.FC = () => {
         <TextInput
           style={styles.input}
           value={password}
+          placeholder={Dictionary.INPUT_YOUR_PASSWORD}
           onChangeText={(password) => setPassword(password)}
         />
       </View>
@@ -62,8 +64,11 @@ const styles = StyleSheet.create({
     fontSize: 30,
   },
   input: {
+    marginVertical: 8,
     borderWidth: 1,
     borderColor: "blue",
+    padding: 5,
+    borderRadius: 5,
   },
   label: {
     fontSize: 18,

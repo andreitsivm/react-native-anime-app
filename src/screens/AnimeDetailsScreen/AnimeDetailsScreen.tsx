@@ -21,7 +21,7 @@ const Details: React.FC<Props> = ({ route, navigation }) => {
   const { id } = route.params;
 
   const { isLoading, data, errors } = useFetch(`${BASE_URL}${API.ANIME}/${id}`);
-
+  console.log(isLoading);
   if (isLoading) {
     return (
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
