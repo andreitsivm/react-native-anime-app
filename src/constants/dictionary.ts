@@ -9,4 +9,9 @@ export enum Dictionary {
   DETAILS_SCREEN_TITLE = "Details",
   AUTH_SCREEN_TITLE = "Authentication",
   MAIN = "Main",
+  SIGN_IN = "Sign In",
+  SIGN_UP = "Sign Up",
+  EMAIL = "Email",
+  PASSWORD = "Password",
+  REPEAT_PASSWORD = "Repeat password",
 }

@@ -1,21 +1,22 @@
 import React from "react";
 import { View, Text, TextInput, StyleSheet } from "react-native";
 import { Layout } from "../../components";
+import { Dictionary } from "../../constants";
 
 const RegisterScreen = () => {
   return (
     <Layout>
-      <Text style={styles.title}>Sign Up</Text>
+      <Text style={styles.title}>{Dictionary.SIGN_UP}</Text>
       <View>
-        <Text style={styles.label}>Email</Text>
+        <Text style={styles.label}>{Dictionary.EMAIL}</Text>
         <TextInput style={styles.input} />
       </View>
       <View>
-        <Text style={styles.label}>Password</Text>
+        <Text style={styles.label}>{Dictionary.PASSWORD}</Text>
         <TextInput style={styles.input} />
       </View>
       <View>
-        <Text style={styles.label}>Repeat password</Text>
+        <Text style={styles.label}>{Dictionary.REPEAT_PASSWORD}</Text>
         <TextInput style={styles.input} />
       </View>
     </Layout>
