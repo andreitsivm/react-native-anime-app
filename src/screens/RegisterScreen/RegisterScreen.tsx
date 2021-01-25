@@ -45,6 +45,8 @@ const RegisterScreen = () => {
         <TextInput
           style={styles.input}
           value={password}
+          secureTextEntry
+          textContentType="password"
           placeholder={Dictionary.INPUT_YOUR_PASSWORD}
           onChangeText={(password) => setPassword(password)}
         />
@@ -54,6 +56,8 @@ const RegisterScreen = () => {
         <TextInput
           placeholder={Dictionary.REPEAT_PASSWORD}
           style={styles.input}
+          secureTextEntry
+          textContentType="password"
           value={confirmedPassword}
           onChangeText={(password) => setConfirmedPassword(password)}
         />

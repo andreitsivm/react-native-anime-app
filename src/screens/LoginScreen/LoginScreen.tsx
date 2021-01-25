@@ -44,6 +44,8 @@ const LoginScreen: React.FC = () => {
         <TextInput
           style={styles.input}
           value={password}
+          secureTextEntry
+          textContentType="password"
           placeholder={Dictionary.INPUT_YOUR_PASSWORD}
           onChangeText={(password) => setPassword(password)}
         />
