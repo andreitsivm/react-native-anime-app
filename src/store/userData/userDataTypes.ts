@@ -1,12 +1,13 @@
-export const SAVE_TOKEN = "userData/savePost";
+export const SAVE_USER = "userData/savePost";
+import { User } from "@firebase/auth-types";
 
 export interface userDataState {
-  token: string;
+  user: User | null;
 }
 
-interface SaveTokenAction {
-  type: typeof SAVE_TOKEN;
-  token: string;
+interface SaveUserAction {
+  type: typeof SAVE_USER;
+  user: User | null;
 }
 
-export type UserDataAction = SaveTokenAction;
+export type UserDataAction = SaveUserAction;

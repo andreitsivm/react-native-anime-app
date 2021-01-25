@@ -1,7 +1,8 @@
-import { SAVE_TOKEN, UserDataAction, userDataState } from "./userDataTypes";
+import { SAVE_USER, UserDataAction, userDataState } from "./userDataTypes";
+import {} from "firebase";
 
 const initialState: userDataState = {
-  token: "",
+  user: null,
 };
 
 export const userDataReducer = (
@@ -9,10 +10,10 @@ export const userDataReducer = (
   action: UserDataAction
 ) => {
   switch (action.type) {
-    case SAVE_TOKEN:
+    case SAVE_USER:
       return {
         ...state,
-        token: action.token,
+        user: action.user,
       };
 
     default:

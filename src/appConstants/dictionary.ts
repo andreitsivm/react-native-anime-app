@@ -13,5 +13,6 @@ export enum Dictionary {
   SIGN_UP = "Sign Up",
   EMAIL = "Email",
   PASSWORD = "Password",
+  LOGOUT = "Logout",
   REPEAT_PASSWORD = "Repeat password",
 }

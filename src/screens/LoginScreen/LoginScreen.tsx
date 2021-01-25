@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, TextInput, Button, Alert } from "react-native";
 import { useDispatch } from "react-redux";
 import firebase from "firebase";
 import { Layout } from "../../components";
-import { saveToken } from "../../store";
+import { saveUser } from "../../store";
 import { Dictionary } from "../../appConstants";
 
 const LoginScreen: React.FC = () => {
@@ -16,7 +16,7 @@ const LoginScreen: React.FC = () => {
       const response = await firebase
         .auth()
         .signInWithEmailAndPassword(email, password);
-      // dispatch(saveToken(response.user));
+      dispatch(saveUser(response.user));
       Alert.alert("Succesfully logined");
     } catch (error) {
       Alert.alert(error.message);

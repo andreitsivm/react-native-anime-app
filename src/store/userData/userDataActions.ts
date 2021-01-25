@@ -1,6 +1,7 @@
-import { SAVE_TOKEN, UserDataAction } from "./userDataTypes";
+import { SAVE_USER, UserDataAction } from "./userDataTypes";
+import { User } from "@firebase/auth-types";
 
-export const saveToken = (token: string): UserDataAction => ({
-  type: SAVE_TOKEN,
-  token,
+export const saveUser = (user: User | null): UserDataAction => ({
+  type: SAVE_USER,
+  user,
 });
