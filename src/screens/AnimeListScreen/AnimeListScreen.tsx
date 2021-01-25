@@ -6,10 +6,10 @@ import {
   StyleSheet,
   ActivityIndicator,
 } from "react-native";
-import { Layout, Card } from "components";
-import { BASE_URL, screens, API, Dictionary } from "appConstants";
-import { useFetch } from "hooks/useFetch.hook";
-import { Anime } from "interfaces";
+import { Layout, Card } from "../../components";
+import { BASE_URL, screens, API, Dictionary } from "../../appConstants";
+import { useFetch } from "../../hooks/useFetch.hook";
+import { Anime } from "../../interfaces";
 
 interface Props {
   navigation: any;

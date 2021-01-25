@@ -8,9 +8,9 @@ import {
   ScrollView,
   ActivityIndicator,
 } from "react-native";
-import { Layout } from "components/Layout";
-import { Dictionary, API, BASE_URL } from "appConstants";
-import { useFetch } from "hooks/useFetch.hook";
+import { Layout } from "../../components";
+import { Dictionary, API, BASE_URL } from "../../appConstants";
+import { useFetch } from "../../hooks/useFetch.hook";
 
 interface Props {
   navigation: any;

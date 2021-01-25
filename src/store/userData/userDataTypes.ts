@@ -1,7 +1,7 @@
 export const SAVE_TOKEN = "userData/savePost";
 
 export interface userDataState {
-  token: string | null;
+  token: string;
 }
 
 interface SaveTokenAction {

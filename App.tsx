@@ -1,9 +1,11 @@
 import "react-native-gesture-handler";
 import React from "react";
+import { Provider } from "react-redux";
 import { NavigationContainer } from "@react-navigation/native";
 import firebase from "firebase";
 
 import { DrawerNavigation } from "./src/navigation";
+import { store } from "./src/store";
 
 const firebaseConfig = {
   apiKey: "AIzaSyA8pwLDgSkmZKzdIzOa5c6SDOJ-dwojHEo",
@@ -18,9 +20,11 @@ firebase.initializeApp(firebaseConfig);
 
 const App = () => {
   return (
-    <NavigationContainer>
-      <DrawerNavigation />
-    </NavigationContainer>
+    <Provider store={store}>
+      <NavigationContainer>
+        <DrawerNavigation />
+      </NavigationContainer>
+    </Provider>
   );
 };
 export default App;

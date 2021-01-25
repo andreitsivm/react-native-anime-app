@@ -1,18 +1,22 @@
 import React, { useState } from "react";
 import { StyleSheet, Text, View, TextInput, Button, Alert } from "react-native";
+import { useDispatch } from "react-redux";
 import firebase from "firebase";
-import { Layout } from "components";
-import { Dictionary } from "appConstants";
+import { Layout } from "../../components";
+import { saveToken } from "../../store";
+import { Dictionary } from "../../appConstants";
 
 const LoginScreen: React.FC = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const dispatch = useDispatch();
 
   const onSignIn = async () => {
     try {
       const response = await firebase
         .auth()
         .signInWithEmailAndPassword(email, password);
+      // dispatch(saveToken(response.user));
       Alert.alert("Succesfully logined");
     } catch (error) {
       Alert.alert(error.message);

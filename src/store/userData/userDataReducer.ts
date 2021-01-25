@@ -1,7 +1,7 @@
 import { SAVE_TOKEN, UserDataAction, userDataState } from "./userDataTypes";
 
 const initialState: userDataState = {
-  token: null,
+  token: "",
 };
 
 export const userDataReducer = (
@@ -16,6 +16,6 @@ export const userDataReducer = (
       };
 
     default:
-      state;
+      return state;
   }
 };

@@ -1,12 +1,7 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import {
-  LoginScreen,
-  AnimeDetailsScreen,
-  AnimeListScreen,
-  MainScreen,
-} from "screens";
-import { Dictionary, screens } from "appConstants";
+import { AnimeDetailsScreen, AnimeListScreen } from "../../screens";
+import { Dictionary, screens } from "../../appConstants";
 
 const Stack = createStackNavigator();
 

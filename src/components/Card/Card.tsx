@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
-import { Dictionary } from "appConstants";
+import { Dictionary } from "../../appConstants";
 
 interface Props {
   title: string;

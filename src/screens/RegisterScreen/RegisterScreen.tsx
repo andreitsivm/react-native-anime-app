@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, StyleSheet, Button, Alert } from "react-native";
 import firebase from "firebase";
-import { Layout } from "components";
-import { Dictionary } from "appConstants";
+import { Layout } from "../../components";
+import { Dictionary } from "../../appConstants";
 
 const RegisterScreen = () => {
   const [email, setEmail] = useState("");

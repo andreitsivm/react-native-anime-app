@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet, SafeAreaView, StatusBar } from "react-native";
+import { View, StyleSheet, StatusBar } from "react-native";
 
 interface Props {
   children: React.ReactNode;
