@@ -6,5 +6,9 @@ export enum API {
 
 export enum screens {
   MAIN = "Main",
-  DETAILS = "Details",
+  ANIME_LIST = "Anime list",
+  ANIME_DETAILS = "Anime Details",
+  LOGIN = "Login",
+  REGISTER = "Register",
+  AUTH = "Authentication",
 }

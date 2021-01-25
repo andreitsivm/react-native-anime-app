@@ -1,27 +1,26 @@
 import "react-native-gesture-handler";
 import React from "react";
-import { HomeScreen, DetailsScreen } from "./src/screens";
 import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
-import { Dictionary, screens } from "./src/constants";
+import firebase from "firebase";
 
-const Stack = createStackNavigator();
+import { DrawerNavigation } from "./src/navigation";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyA8pwLDgSkmZKzdIzOa5c6SDOJ-dwojHEo",
+  authDomain: "anime-list-b5cb3.firebaseapp.com",
+  projectId: "anime-list-b5cb3",
+  storageBucket: "anime-list-b5cb3.appspot.com",
+  messagingSenderId: "490497398780",
+  appId: "1:490497398780:web:8f8ab9ce6e454279060479",
+};
+if (firebase.app.length === 0) {
+  firebase.initializeApp(firebaseConfig);
+}
 
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen
-          name={screens.MAIN}
-          component={HomeScreen}
-          options={{ title: "Anime List" }}
-        />
-        <Stack.Screen
-          name={screens.DETAILS}
-          component={DetailsScreen}
-          options={{ title: "Details" }}
-        />
-      </Stack.Navigator>
+      <DrawerNavigation />
     </NavigationContainer>
   );
 };

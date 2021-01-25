@@ -9,7 +9,7 @@ import {
   ActivityIndicator,
 } from "react-native";
 import { Layout } from "../../components/Layout";
-import { Dictionary, API, BASE_URL } from "../../constants/";
+import { Dictionary, API, BASE_URL } from "../../constants";
 import { useFetch } from "../../hooks/useFetch.hook";
 
 interface Props {

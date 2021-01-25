@@ -5,4 +5,8 @@ export enum Dictionary {
   PREVIOUS = "Previous",
   NEXT = "Next",
   RATING = "Rating",
+  ANIME_LIST_SCREEN_TITLE = "Anime list",
+  DETAILS_SCREEN_TITLE = "Details",
+  AUTH_SCREEN_TITLE = "Authentication",
+  MAIN = "Main",
 }

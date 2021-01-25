@@ -6,8 +6,8 @@ import {
   StyleSheet,
   ActivityIndicator,
 } from "react-native";
-import { Layout, Card } from "../../components/";
-import { BASE_URL, screens, API, Dictionary } from "../../constants/";
+import { Layout, Card } from "../../components";
+import { BASE_URL, screens, API, Dictionary } from "../../constants";
 import { useFetch } from "../../hooks/useFetch.hook";
 import { Anime } from "../../interfaces";
 
@@ -32,7 +32,7 @@ interface FetchData {
   isLoading: boolean;
 }
 
-const Home: React.FC<Props> = ({ navigation }) => {
+const AnimeListScreen: React.FC<Props> = ({ navigation }) => {
   const [url, setUrl] = useState(BASE_URL + API.ANIME);
   const { data, errors, isLoading }: FetchData = useFetch(url);
 
@@ -57,7 +57,7 @@ const Home: React.FC<Props> = ({ navigation }) => {
             image={attributes.posterImage.tiny}
             rating={attributes.averageRating}
             onPress={() => {
-              navigation.navigate(screens.DETAILS, {
+              navigation.navigate(screens.ANIME_DETAILS, {
                 id,
               });
             }}
@@ -103,4 +103,4 @@ const styles = StyleSheet.create({
     marginHorizontal: 8,
   },
 });
-export default Home;
+export default AnimeListScreen;
