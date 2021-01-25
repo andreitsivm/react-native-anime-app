@@ -14,9 +14,14 @@ const RegisterScreen = () => {
       firebase
         .auth()
         .createUserWithEmailAndPassword(email, password)
-        .then((userCred) => {
-          const user = userCred.user;
+        .then((response) => {
+          console.log(response.user);
           Alert.alert("Succesfully register");
+        })
+        .then(() => {
+          setEmail("");
+          setPassword("");
+          setConfirmedPassword("");
         })
         .catch((error) => Alert.alert(error.message));
     }
