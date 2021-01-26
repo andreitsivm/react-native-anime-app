@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { Layout } from "../../components";
 
-const MainScreen = () => {
+const MainScreen: React.FC = () => {
   return (
     <Layout>
       <View style={styles.container}>

@@ -8,7 +8,7 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 
 const Tab = createBottomTabNavigator();
 
-const AuthenticationTab = () => {
+const AuthenticationTab: React.FC = () => {
   const user = useSelector(userSelector);
   if (user) {
     return <AccountScreen />;

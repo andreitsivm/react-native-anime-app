@@ -5,7 +5,7 @@ import { Layout } from "../../components";
 import { Dictionary } from "../../appConstants";
 import { TextInput, HelperText } from "react-native-paper";
 
-const RegisterScreen = () => {
+const RegisterScreen: React.FC = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmedPassword, setConfirmedPassword] = useState("");

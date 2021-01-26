@@ -10,7 +10,7 @@ import { useSelector } from "react-redux";
 
 const Drawer = createDrawerNavigator();
 
-const DrawerNavigation = () => {
+const DrawerNavigation: React.FC = () => {
   const user = useSelector(userSelector);
   return (
     <Drawer.Navigator

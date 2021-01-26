@@ -5,7 +5,7 @@ import { Dictionary, screens } from "../../appConstants";
 
 const Stack = createStackNavigator();
 
-const AnimeListStack = () => {
+const AnimeListStack: React.FC = () => {
   return (
     <Stack.Navigator
       initialRouteName={screens.ANIME_LIST}
