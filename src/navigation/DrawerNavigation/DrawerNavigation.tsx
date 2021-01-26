@@ -7,8 +7,6 @@ import { AnimeListStack } from "../StackNavigation";
 import { AuthenticationTab } from "../TabNavigation";
 import { userSelector } from "../../store";
 import { useSelector } from "react-redux";
-import { Button } from "react-native";
-import { Card } from "../../components";
 
 const Drawer = createDrawerNavigator();
 
@@ -50,7 +48,7 @@ const DrawerNavigation = () => {
         component={AuthenticationTab}
         options={{
           title: user ? Dictionary.ACCOUNT_INFO : Dictionary.AUTH_SCREEN_TITLE,
-          drawerLabel: "Home",
+          drawerLabel: "Login",
           drawerIcon: ({ size, color }) => (
             <MaterialCommunityIcons
               name="login-variant"
