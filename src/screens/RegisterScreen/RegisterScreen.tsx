@@ -16,7 +16,7 @@ const RegisterScreen = () => {
         .createUserWithEmailAndPassword(email, password)
         .then((response) => {
           console.log(response.user);
-          Alert.alert("Succesfully register");
+          Alert.alert("Succesfully registered");
         })
         .then(() => {
           setEmail("");

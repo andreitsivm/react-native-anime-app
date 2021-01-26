@@ -17,7 +17,6 @@ const LoginScreen: React.FC = () => {
         .auth()
         .signInWithEmailAndPassword(email, password);
       dispatch(saveUser(response.user));
-      Alert.alert("Succesfully logined");
     } catch (error) {
       Alert.alert(error.message);
     }
