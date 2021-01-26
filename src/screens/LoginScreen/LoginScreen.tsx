@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, View, TextInput, Button, Alert } from "react-native";
+import { StyleSheet, Text, View, Button, Alert } from "react-native";
 import { useDispatch } from "react-redux";
 import firebase from "firebase";
+import { TextInput, HelperText } from "react-native-paper";
 import { Layout } from "../../components";
 import { saveUser } from "../../store";
 import { Dictionary } from "../../appConstants";
@@ -29,25 +30,27 @@ const LoginScreen: React.FC = () => {
       </View>
 
       <View>
-        <Text style={styles.label}>{Dictionary.EMAIL}</Text>
         <TextInput
-          style={styles.input}
+          label={Dictionary.EMAIL}
           placeholder={Dictionary.INPUT_YOUR_EMAIL}
           keyboardType="email-address"
           value={email}
+          mode="outlined"
           onChangeText={(email) => setEmail(email)}
         />
+        <HelperText />
       </View>
       <View>
-        <Text style={styles.label}>{Dictionary.PASSWORD}</Text>
         <TextInput
-          style={styles.input}
+          label={Dictionary.PASSWORD}
           value={password}
+          mode="outlined"
           secureTextEntry
           textContentType="password"
           placeholder={Dictionary.INPUT_YOUR_PASSWORD}
           onChangeText={(password) => setPassword(password)}
         />
+        <HelperText />
       </View>
       <View style={styles.button}>
         <Button
@@ -63,16 +66,6 @@ const LoginScreen: React.FC = () => {
 const styles = StyleSheet.create({
   title: {
     fontSize: 30,
-  },
-  input: {
-    marginVertical: 8,
-    borderWidth: 1,
-    borderColor: "blue",
-    padding: 5,
-    borderRadius: 5,
-  },
-  label: {
-    fontSize: 18,
   },
   button: {
     marginTop: 8,

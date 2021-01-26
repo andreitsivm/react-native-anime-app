@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, StyleSheet, Button, Alert } from "react-native";
+import { View, Text, StyleSheet, Button, Alert } from "react-native";
 import firebase from "firebase";
 import { Layout } from "../../components";
 import { Dictionary } from "../../appConstants";
+import { TextInput, HelperText } from "react-native-paper";
 
 const RegisterScreen = () => {
   const [email, setEmail] = useState("");
@@ -31,36 +32,39 @@ const RegisterScreen = () => {
     <Layout>
       <Text style={styles.title}>{Dictionary.SIGN_UP}</Text>
       <View>
-        <Text style={styles.label}>{Dictionary.EMAIL}</Text>
         <TextInput
-          style={styles.input}
+          label={Dictionary.EMAIL}
           keyboardType="email-address"
           placeholder={Dictionary.INPUT_YOUR_EMAIL}
           value={email}
+          mode="outlined"
           onChangeText={(email) => setEmail(email)}
         />
+        <HelperText />
       </View>
       <View>
-        <Text style={styles.label}>{Dictionary.PASSWORD}</Text>
         <TextInput
-          style={styles.input}
+          label={Dictionary.PASSWORD}
           value={password}
           secureTextEntry
+          mode="outlined"
           textContentType="password"
           placeholder={Dictionary.INPUT_YOUR_PASSWORD}
           onChangeText={(password) => setPassword(password)}
         />
+        <HelperText />
       </View>
       <View>
-        <Text style={styles.label}>{Dictionary.REPEAT_PASSWORD}</Text>
         <TextInput
+          label={Dictionary.REPEAT_PASSWORD}
           placeholder={Dictionary.REPEAT_PASSWORD}
-          style={styles.input}
           secureTextEntry
+          mode="outlined"
           textContentType="password"
           value={confirmedPassword}
           onChangeText={(password) => setConfirmedPassword(password)}
         />
+        <HelperText />
       </View>
       <View style={styles.button}>
         <Button
@@ -79,16 +83,6 @@ const styles = StyleSheet.create({
   },
   button: {
     marginTop: 8,
-  },
-  input: {
-    marginVertical: 8,
-    borderWidth: 1,
-    borderColor: "blue",
-    padding: 5,
-    borderRadius: 5,
-  },
-  label: {
-    fontSize: 18,
   },
 });
 
